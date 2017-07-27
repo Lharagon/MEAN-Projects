@@ -1,0 +1,25 @@
+<!-- The whole content below can be removed with the new code.-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Time Zone Display</title>
+  </head>
+  <body>
+    <header>
+      <h1>US Time Zone Display</h1>
+    </header>
+    <main>
+      <div id="timeZones">
+        <button (click)='PST()' type="button" name="button" [ngStyle]="{
+          'background-color':
+        }">PST</button>
+        <button (click)='MST(this)' type="button" name="button">MST</button>
+        <button (click)='CST(this)' type="button" name="button">CST</button>
+        <button (click)='EST(this)' type="button" name="button">EST</button>
+        <button (click)='Clear()' type="button" name="button">Clear</button>
+      </div>
+       <h3>{{currentTime | date:'medium'}}</h3>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<form (submit) = 'updateProduct()'>
+  <h2>Edit Product</h2>
+  <label>Title: <input
+    type="text"
+    name="title"
+    required
+    [(ngModel)] = 'item.title'
+    #titled = ngModel
+    minlength = '4'
+    ></label>
+  <label>Price: <input
+    type="number"
+    name="price"
+    required
+    [(ngModel)] = 'item.price'
+    #prix = ngModel
+    ></label>
+  <label>Image Url: <input
+    type="text"
+    name="image"
+    [(ngModel)] = 'item.image'
+    ></label>
+    <button (click)='annihilate ()'>Delete</button>
+    <input type="submit"  value="Update" [disabled]='!titled.valid || !prix.valid'>
+</form>

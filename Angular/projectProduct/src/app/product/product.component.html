@@ -1,0 +1,11 @@
+<h1>Products List</h1>
+<div class="product" *ngFor='let product of products; let i = index'>
+  <div class="picture">
+    <img *ngIf="product.image" [src]='product.image' alt="Product Picture">
+    <img *ngIf="!product.image" alt="Picture Not Available">
+  </div>
+  <h4>{{product.title}}</h4>
+  <p>{{product.price}}</p>
+  <button><a class='edit' [routerLink] = "['edit', i ]">Edit</a></button>
+  <button class='delete' (click) = "annihilate(i)">delete</button>
+</div>

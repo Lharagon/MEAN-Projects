@@ -1,0 +1,17 @@
+<main>
+  <h1>Anonymous Notes</h1>
+  <form (submit)="onSubmit()">
+    <label>Note: <input
+      type="text"
+      name="note"
+      required
+      minlength='3'
+      [(ngModel)] = 'note'
+      #noted = ngModel
+      ></label>
+    <input type="submit" value="Add Note">
+  </form>
+  <div id="notesContainer">
+    <app-notes [noteList] = 'notes'></app-notes>
+  </div>
+</main>

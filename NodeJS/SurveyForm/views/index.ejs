@@ -1,0 +1,33 @@
+<html lang="en">
+    <head>
+        <title>Survey Form</title>
+        <style>
+            input, label, select, textarea {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <form action="/process" method="post">
+                <label for="name">Your Name:</label>
+                <input type="text" name="name">
+                <label for="location">Dojo Location:</label>
+                <select name="location">
+                    <option value="Los Angeles">Los Angeles</option>
+                    <option value="Hell">Hell</option>
+                    <option value="Phoenix">Phoenix</option>
+                </select>
+                <label for="language">Favorite Language:</label>
+                <select name="language" id="language">
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="Perl">Perl</option>
+                    <option value="Python">Python</option>
+                </select>
+                <label for="comment">Comment: </label>
+                <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+                <input type="submit">
+            </form>
+        </div>
+    </body>
+</html>

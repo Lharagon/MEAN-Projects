@@ -1,0 +1,25 @@
+.productBox {
+  display: inline-block;
+  border: 2px solid black;
+  margin: 4px;
+  padding: 2px;
+  text-align: center;
+}
+aside {
+  display: inline-block;
+  width: 20%;
+  /*height: 100%;*/
+  float: left;
+}
+ main {
+   display: inline-block;
+   width: 70%;
+   float: right;
+ }
+
+label, input {
+  display: block;
+}
+textarea {
+  width: 100%
+}

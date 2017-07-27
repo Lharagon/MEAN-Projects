@@ -1,0 +1,22 @@
+#registerButton {
+  width: 100%;
+  height: 50px;
+  margin-top: 20px;
+  background-color: white;
+  font-family: arial;
+  font-size: 19px;
+}
+/*input {
+  float: center;
+}*/
+h1 {
+  color: red;
+}
+
+.warning {
+  color: red;
+}
+
+.show {
+  display: none;
+}

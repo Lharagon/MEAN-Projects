@@ -1,0 +1,11 @@
+.notes {
+  width: 80%;
+
+  border: 1px solid blue;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 5px;
+}
+.time {
+  text-align: right;
+}

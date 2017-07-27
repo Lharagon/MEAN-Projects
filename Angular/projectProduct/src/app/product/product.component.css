@@ -1,0 +1,10 @@
+.picture {
+  width: 200px;
+  border: 2px solid black;
+  display: inline-block;
+}
+
+img {
+  width: 100%;
+  margin: 0 auto;
+}

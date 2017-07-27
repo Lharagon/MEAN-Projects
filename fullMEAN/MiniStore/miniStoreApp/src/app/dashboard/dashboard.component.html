@@ -1,0 +1,56 @@
+<div class="container">
+  <aside>
+    <form>
+      <input type="text" name="seach" placeholder="search...">
+      <input type="submit" value="Filter">
+    </form>
+  </aside>
+  <main>
+    <div class="productBox">
+      <div class="pictureBox">
+        <img alt="NO PHOTO AVAILABLE">
+      </div>
+      <p>Nike Shoes</p>
+      <p>(20 left)</p>
+    </div>
+    <div class="productBox">
+      <div class="pictureBox">
+        <img alt="NO PHOTO AVAILABLE">
+      </div>
+      <p>Nike Shoes</p>
+      <p>(20 left)</p>
+    </div>
+    <div class="productBox">
+      <div class="pictureBox">
+        <img alt="NO PHOTO AVAILABLE">
+      </div>
+      <p>Nike Shoes</p>
+      <p>(20 left)</p>
+    </div>
+    <div class="productBox">
+      <div class="pictureBox">
+        <img alt="NO PHOTO AVAILABLE">
+      </div>
+      <p>Nike Shoes</p>
+      <p>(20 left)</p>
+    </div>
+    <div class="productBox">
+      <div class="pictureBox">
+        <img alt="NO PHOTO AVAILABLE">
+      </div>
+      <p>Nike Shoes</p>
+      <p>(20 left)</p>
+    </div>
+    <p><a href="#">show more...</a></p>
+    <h4>Recent Orders</h4>
+    <p>Michael purchased 2 Nike Shoes... (3 hours ago)</p>
+    <p>Michael purchased 2 Nike Shoes... (3 hours ago)</p>
+    <p>Michael purchased 2 Nike Shoes... (3 hours ago)</p>
+    <p><a href="#">show all orders...</a></p>
+    <h4>New Customers</h4>
+    <div *ngFor="let cust of customerList">
+      <p>&#9746; {{cust.name}} joined the store. ({{cust.createdAt | date: 'shortDate'}})</p>
+    </div>
+    <p><a href="#">show all customers...</a></p>
+  </main>
+</div>

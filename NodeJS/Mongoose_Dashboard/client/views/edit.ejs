@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mongoose Dashboard</title>
+  </head>
+  <body>
+    <div>
+      <p>Mongoose Name : <%= mongoose.name %></p>
+      <p>Mongoose Age: <%= mongoose.age %></p>
+      <p>Mongoose Joined: <%= mongoose.createdAt %></p>
+      <p>Mongoose Loves to say: <%= mongoose.saying %></p>
+    </div>
+    <form action="/mongooses/<%= mongoose.id %>" method="post">
+      <label for="name">New name:</label> <br>
+      <input type="text" id="name" name="name"> <br>
+      <label for="age">New age:</label> <br>
+      <input type="number" name="age" id="age"> <br>
+      <label for="saying">New saying:</label> <br>
+      <textarea name="saying" rows="8" cols="80" id="saying"></textarea>
+      <input type="submit" value="Edit mongoose">
+    </form>
+    <form action="/mongoose/destroy/<%= mongoose.id %>" method="post">
+      <input type="submit" value="Delete">
+    </form>
+  </body>
+</html>

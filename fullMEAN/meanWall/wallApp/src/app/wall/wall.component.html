@@ -1,0 +1,25 @@
+<header>
+  <h1>Full MEAN Wall</h1>
+  <button type="button" (click)='logOut()'>Sign Out</button>
+  <h2 *ngIf='currentUser'>Welcome {{currentUser.username}}!</h2>
+</header>
+<main>
+  <form id="messageForm" (submit) = 'postMessage()'>
+    <p>Post a message:</p>
+    <textarea name="message" rows="8" cols="80" [(ngModel)]='message.content'></textarea>
+    <input type="submit" value="Post a message">
+  </form>
+  <div class="messageBox" *ngFor="let message of messageList">
+    <h4>{{message.author}} - 5:45pm 2/10/16</h4>
+    <p>{{message.content}}</p>
+    <div class="commentBox" *ngFor="let comment of message.comments">
+      <h5>{{comment.author}} - 5:45pm 2/10/16</h5>
+      <p>{{comment.content}}</p>
+    </div>
+    <form class="commentForm"(submit)="postComment(message._id, formData )" #formData='ngForm'>
+      <p>Post a comment:</p>
+      <textarea name="comment" rows="4" cols="50" ngModel></textarea>
+      <input type="submit" value="Post a comment">
+    </form>
+  </div>
+</main>

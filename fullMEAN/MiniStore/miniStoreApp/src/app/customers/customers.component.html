@@ -1,0 +1,25 @@
+<div class="container">
+  <form (submit) = "addCustomer()">
+    <p>Add a new customer</p>
+    <p *ngIf="error" [ngStyle]="{'color': 'red'}">User already Exists</p>
+    <label>Customer Name: <input type="text" name="customer" [(ngModel)]="customer.name"></label>
+    <input type="submit" value="Add">
+  </form>
+  <input type="text" name="filter" placeholder="search name...">
+  <table>
+    <thead>
+      <tr>
+        <th>Customer Name</th>
+        <th>Created Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let cust of customerList'>
+        <td>{{cust.name}}</td>
+        <td>{{cust.createdAt | date: 'mediumDate'}}</td>
+        <td><button type="button" class="remove" (click)='deleteCustomer(cust._id)'>Remove</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

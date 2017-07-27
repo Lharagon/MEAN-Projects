@@ -1,0 +1,19 @@
+nav {
+  display: inline-block;
+  border: 5px solid black;
+  background-color: #9dc6f3;
+  height: 300px;
+  width: 25%;
+  vertical-align: top;
+  margin-right: 20px;
+}
+
+button {
+  display: block;
+  background-color: white;
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  font-size: 18px
+
+}

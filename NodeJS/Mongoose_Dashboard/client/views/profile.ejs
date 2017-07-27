@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mongoose Dashboard</title>
+  </head>
+  <body>
+    <div>
+      <p>Mongoose Name : <%= mongoose.name %></p>
+      <p>Mongoose Age: <%= mongoose.age %></p>
+      <p>Mongoose Joined: <%= mongoose.createdAt %></p>
+      <p>Mongoose Loves to say: <%= mongoose.saying %></p>
+    </div>
+    <a href="/mongooses/edit/<%= mongoose.id %>">edit</a>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+
+label{
+  display: block;
+}
+
+form {
+  margin-bottom: 50px;
+}
+
+thead {
+  background: lightgrey;
+}

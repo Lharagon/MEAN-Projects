@@ -1,0 +1,30 @@
+<div class="container">
+  <aside>
+    <form>
+      <input type="text" name="seach" placeholder="search...">
+      <input type="submit" value="Filter">
+    </form>
+    <form (submit)="addProduct()">
+      <p>Add a new product</p>
+      <label>Name:</label>
+      <input type="text" name="product" placeholder="name..." [(ngModel)] = 'product.name'>
+      <label>Image (url):</label>
+      <input type="text" name="imageUrl" placeholder="http://" [(ngModel)] = 'product.img'>
+      <label>Description:</label>
+      <textarea name="description" rows="4" cols="10" [(ngModel)] = 'product.description'></textarea>
+      <label>Initial Quantity:</label>
+      <input type="number" name="quantity" placeholder="1" [(ngModel)] = 'product.quantity'>
+      <input type="submit" value="Create">
+    </form>
+  </aside>
+  <main>
+    <div class="productBox" *ngFor='let prod of productList'>
+      <div class="pictureBox">
+        <img [src]='prod.img' alt="NO PHOTO AVAILABLE">
+      </div>
+      <p>{{prod.name}}</p>
+      <p>({{prod.quantity}} left)</p>
+    </div>
+    <p><a href="#">show more...</a></p>
+  </main>
+</div>

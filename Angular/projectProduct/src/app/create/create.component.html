@@ -1,0 +1,24 @@
+<form (submit) = 'addProduct()'>
+  <h2>Create a New Product</h2>
+  <label>Title: <input
+    type="text"
+    name="title"
+    required
+    [(ngModel)] = 'newProduct.title'
+    #titled = ngModel
+    minlength = '4'
+    ></label>
+  <label>Price: <input
+    type="number"
+    name="price"
+    required
+    [(ngModel)] = 'newProduct.price'
+    #prix = ngModel
+    ></label>
+  <label>Image Url: <input
+    type="text"
+    name="image"
+    [(ngModel)] = 'newProduct.image'
+    ></label>
+    <input type="submit"  value="CREATE" [disabled]='!titled.valid || !prix.valid'>
+</form>

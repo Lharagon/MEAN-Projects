@@ -1,0 +1,18 @@
+.productBox {
+  display: inline-block;
+  border: 2px solid black;
+}
+aside {
+  display: inline-block;
+  width: 20%;
+  /*height: 100%;*/
+  float: left;
+}
+ main {
+   display: inline-block;
+   width: 70%;
+   float: right;
+ }
+ label {
+   display: block;
+ }

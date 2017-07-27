@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+h1, h2 {
+  display: inline;
+}
+h2 {
+    margin-right: 15px;
+}
+
+header {
+  border-bottom: 4px solid black;
+}
+
+h2, button {
+  float: right;
+}
+
+main {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+textarea {
+  width: 100%;
+}
+
+.commentBox {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+
+form input {
+  float: right;
+}
+
+.messageBox {
+  margin-top: 15px;
+}
+
+.commentForm {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 5px;
+}
